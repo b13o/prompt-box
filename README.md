@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![スクリーンショット](https://github.com/user-attachments/assets/82a2fc15-9bee-40aa-8ef7-a491ec4c32a0)
 
-## Getting Started
+# AI プロンプト管理ツール
 
-First, run the development server:
+## 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+このプロジェクトでは、普段の作業で使えるようなプロンプトを管理するツールを構築します。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+プロンプトのテンプレート、それに沿ったフォーム、作成したプロンプトの保存ができるようにします！
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 学習目標
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+今回は、React/ Next.js における MDX（markdown）の実装について、学習します。
 
-## Learn More
+特に、MDX の基本的な扱いと、next-mdx-remote-client を使用した柔軟なコンパイル処理について、理解を深めてください。
 
-To learn more about Next.js, take a look at the following resources:
+合わせて、Cloudflare（@opennextjs）へのデプロイ手順も確認してください。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 推奨技術
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+このプロジェクトの難易度と趣旨を踏まえて、以下の使用をお勧めします。
 
-## Deploy on Vercel
+- Next.js 15 App Router
+- @mdx-js/mdx による MDX（md）の導入
+- next-mdx-remote-client による動的な解析
+- Tailwind CSS を用いたスタイリング
+- Shadcn/ui のコンポーネントの活用
+- TypeScript による型チェック
+- Cloudflare（＠opennext） へのデプロイ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 お題
+
+- 「ユーザーストーリー」を全て満たすアプリを構築してください。
+- 必要に応じて、プロジェクトを自分の好みでカスタマイズしても構いません。
+- シンプルで分かりやすい実装を心がけてください。
+
+### 必須機能
+
+1. **テンプレート一覧表示**：
+   - MDX ファイルから読み込んだテンプレートを一覧で表示する。
+2. **テンプレート詳細表示**：
+   - 個別テンプレートのタイトル、説明、テンプレート内容を表示する。
+3. **動的プロンプト生成**：
+   - テンプレート内の変数をフォームで編集し、リアルタイムでプロンプトを生成する。
+4. **生成したプロンプトの活用**：
+   - 生成したプロンプトをクリップボードにコピーできる。
+   - 生成したプロンプトを保存し、評価できる機能を提供する。
+
+## ユーザーストーリー
+
+- [ ] ユーザーがサイトにアクセスすると、カテゴリ別のテンプレート一覧が表示される。
+- [ ] テンプレートカードをクリックすると、詳細ページに遷移する。
+- [ ] テンプレート詳細ページでは、テンプレートの説明と変数入力フォームが表示される。
+- [ ] 変数を入力すると、リアルタイムでプレビューが更新される。
+- [ ] 「**_コピー_**」ボタンをクリックすると、生成されたプロンプトがクリップボードにコピーされる。
+- [ ] 「**_保存_**」ボタンをクリックすると、生成したプロンプトが履歴に保存される。
+- [ ] 保存したプロンプトに対して、効果を 1〜5 段階で評価できる。
+- [ ] MDX を使用した About ページでは、React コンポーネントが埋め込まれ、インタラクティブな要素が表示される。
+- [ ] アプリケーションがデプロイされており、誰でもアクセス可能である。
