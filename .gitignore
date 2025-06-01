@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# OpenNext build output
+.open-next
+
 # testing
 /coverage
 
