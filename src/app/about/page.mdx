@@ -1,0 +1,97 @@
+import { Card } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+# Prompt Box について
+
+> AI プロンプトテンプレートを管理・カスタマイズするためのツール
+
+## Prompt Box とは
+
+Prompt Box は、AI プロンプトテンプレートの作成、管理、カスタマイズを支援するパワフルなアプリケーションです。
+
+コンテンツクリエイター、開発者、AI マニアを問わず、
+Prompt Box を使えば簡単に最適なプロンプトを作成できます。
+
+**プロンプト作成をより効率的に、そして楽しく管理することを目指しています** 👍
+
+<Card className="px-4 bg-gradient-to-br from-slate-50 to-purple-50 dark:from-zinc-900 dark:to-purple-950">
+
+## 💡 特徴
+
+- **テンプレートライブラリ**：目的別に整理された、プロンプトテンプレートコレクション
+- **変数カスタマイズ**：フォーム入力だけで簡単にテンプレートをカスタマイズ
+- **リアルタイムプレビュー**：変更に応じたプロンプトの更新をすぐに確認
+- **ワンクリックコピー**：生成したプロンプトをすぐに使用できるようにコピー機能を搭載
+- **自動保存と評価**：使用したプロンプトを自動保存し、後から結果の評価を記録
+
+</Card>
+
+<section className="not-prose my-12">
+    <h2 className="text-2xl font-bold">FAQ</h2>
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem
+        value="item-1"
+        className="border-zinc-100 dark:border-zinc-800"
+      >
+        <AccordionTrigger className="text-lg font-medium py-4">
+          MDXとは何ですか？
+        </AccordionTrigger>
+        <AccordionContent className="text-zinc-600 dark:text-zinc-300">
+          MDX は、Markdown に JSX を組み込める技術です。<br />
+          これにより、ドキュメントとインタラクティブな React コンポーネントを、
+          シームレスに統合できます。<br />
+          多くの開発者によって使い慣れた、Markdown形式で、Webページを作成したいと思ったことはありませんか？<br />
+          とはいえ、リッチなUI/UX を表現するには、md では限界があります！
+          MDX をはじめましょう👍
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem
+        value="item-2"
+        className="border-zinc-100 dark:border-zinc-800"
+      >
+        <AccordionTrigger className="text-lg font-medium py-4">
+          変数はどのように使えばいいですか？
+        </AccordionTrigger>
+        <AccordionContent className="text-zinc-600 dark:text-zinc-300">
+          変数を使うことでテンプレートが柔軟で再利用可能になります。
+          `{トピック}`
+          のように中括弧で囲んだわかりやすい名前を使い、各変数に明確な説明を提供しましょう。
+          テンプレート内の変数は自動的に検出され、フォームで入力できるようになります。
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem
+        value="item-3"
+        className="border-zinc-100 dark:border-zinc-800"
+      >
+        <AccordionTrigger className="text-lg font-medium py-4">
+          保存したプロンプトはどこで確認できますか？
+        </AccordionTrigger>
+        <AccordionContent className="text-zinc-600 dark:text-zinc-300">
+          ナビゲーションメニューの「保存済み」から、過去に使用したすべてのプロンプトを確認できます。
+          日時、テンプレート名、評価などで探すことも可能です。
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+
+</section>
+
+<Card className="px-4">
+    
+## ⚙️ Prompt Box の技術構成
+
+- Next.js
+- React
+- Tailwind CSS
+- shadcn/ui
+- MDX
+- next-mdx-remote-client
+- Cloudflare/ @opennext
+
+</Card>
